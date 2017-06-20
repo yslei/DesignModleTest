@@ -6,6 +6,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.3.1'
+        classpath 'me.tatarka:gradle-retrolambda:3.2.5'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -20,4 +21,18 @@ allprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+// Define versions in a single place
+ext {
+    appcompatv7Version = '25.3.1'
+    constraintLayoutVersion = '1.0.0-alpha9'
+    multidexVersion = '1.0.0'
+    junitVersion = '4.12'
+
+    retrofit2Version = '2.2.0'
+    rxandroidVersion = '2.0.1'
+    rxjava2Version = '2.0.8'
+    rxcycleLifeVersion = '1.0'
+    loggingInterceptor = '3.4.2'
 }
